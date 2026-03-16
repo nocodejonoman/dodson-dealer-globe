@@ -520,16 +520,29 @@ const globeGroup = new THREE.Group();
 scene.add(globeGroup);
 
 // ── Stars ──
-const starVerts = [];
-for (let i = 0; i < 400; i++) {
+const starVerts = [], starSizes = [], starOpacities = [];
+for (let i = 0; i < 2000; i++) {
   const t = Math.random() * Math.PI * 2;
   const p = Math.acos(2 * Math.random() - 1);
-  const r = 40 + Math.random() * 20;
+  const r = 50 + Math.random() * 50;
   starVerts.push(r*Math.sin(p)*Math.cos(t), r*Math.cos(p), r*Math.sin(p)*Math.sin(t));
 }
 const starGeom = new THREE.BufferGeometry();
 starGeom.setAttribute('position', new THREE.Float32BufferAttribute(starVerts, 3));
-scene.add(new THREE.Points(starGeom, new THREE.PointsMaterial({ color: 0xffffff, size: 1.2, sizeAttenuation: true, transparent: true, opacity: 0.7 })));
+// Dim small stars with a few brighter ones
+const starMat = new THREE.PointsMaterial({ color: 0xeeeeff, size: 0.25, sizeAttenuation: true, transparent: true, opacity: 0.5 });
+scene.add(new THREE.Points(starGeom, starMat));
+// A handful of slightly brighter stars
+const brightVerts = [];
+for (let i = 0; i < 80; i++) {
+  const t = Math.random() * Math.PI * 2;
+  const p = Math.acos(2 * Math.random() - 1);
+  const r = 50 + Math.random() * 50;
+  brightVerts.push(r*Math.sin(p)*Math.cos(t), r*Math.cos(p), r*Math.sin(p)*Math.sin(t));
+}
+const brightGeom = new THREE.BufferGeometry();
+brightGeom.setAttribute('position', new THREE.Float32BufferAttribute(brightVerts, 3));
+scene.add(new THREE.Points(brightGeom, new THREE.PointsMaterial({ color: 0xffffff, size: 0.4, sizeAttenuation: true, transparent: true, opacity: 0.7 })));
 
 // ── Dot Textures (shared per tier) ──
 const DOT_TEXTURES = {};
