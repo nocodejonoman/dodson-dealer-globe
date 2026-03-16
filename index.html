@@ -384,6 +384,8 @@ canvas { display: block; }
   <div class="divider"></div>
   <div id="dp-contact"></div>
   <a class="visit-btn" id="dp-website" href="#" target="_blank" rel="noopener">VISIT WEBSITE &rarr;</a>
+  <div class="divider"></div>
+  <div id="dp-map" style="width:100%;height:200px;border-radius:6px;overflow:hidden;border:1px solid rgba(201,168,76,0.2);"></div>
 </div>
 
 <div id="cluster-panel">
@@ -433,19 +435,22 @@ const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(50, innerWidth / innerHeight, 0.1, 200);
 camera.position.z = CAM_MAX; // Start far for intro zoom
 
-const renderer = new THREE.WebGLRenderer({ antialias: true });
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
 renderer.setSize(innerWidth, innerHeight);
 renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
 renderer.setClearColor(0x000408);
 document.body.appendChild(renderer.domElement);
 
-scene.add(new THREE.AmbientLight(0x224466, 0.8));
-const sunLight = new THREE.DirectionalLight(0xffeedd, 0.6);
+scene.add(new THREE.AmbientLight(0x88aacc, 1.8));
+const sunLight = new THREE.DirectionalLight(0xffeedd, 1.2);
 sunLight.position.set(5, 3, 5);
 scene.add(sunLight);
-const backLight = new THREE.DirectionalLight(0x334466, 0.3);
+const backLight = new THREE.DirectionalLight(0x6688aa, 0.8);
 backLight.position.set(-3, -2, -5);
 scene.add(backLight);
+const fillLight = new THREE.DirectionalLight(0xaabbcc, 0.5);
+fillLight.position.set(0, -5, 3);
+scene.add(fillLight);
 
 const globeGroup = new THREE.Group();
 scene.add(globeGroup);
@@ -532,8 +537,8 @@ function createTerminator() {
       float shadow = 1.0 - smoothstep(-0.15, 0.15, sunDot);
       vec3 nightTint = vec3(0.01, 0.02, 0.06);
       vec3 dayTint = vec3(0.55, 0.50, 0.38);
-      float nightAlpha = shadow * 0.4;
-      float dayAlpha = (1.0 - shadow) * 0.1;
+      float nightAlpha = shadow * 0.25;
+      float dayAlpha = (1.0 - shadow) * 0.05;
       vec3 color = mix(dayTint, nightTint, shadow);
       float alpha = mix(dayAlpha, nightAlpha, shadow);
       gl_FragColor = vec4(color, alpha);
@@ -570,9 +575,9 @@ function buildGlobe(tex) {
   init();
 }
 
-tl.load('https://unpkg.com/three-globe/example/img/earth-night.jpg',
+tl.load('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg',
   t => buildGlobe(t), undefined,
-  () => tl.load('https://raw.githubusercontent.com/turban/webgl-earth/master/images/2_no_clouds_4k.jpg',
+  () => tl.load('https://unpkg.com/three-globe/example/img/earth-day.jpg',
     t => buildGlobe(t), undefined,
     () => buildGlobe(null)
   )
@@ -1023,6 +1028,10 @@ function showDealer(d) {
 
   const wb = document.getElementById('dp-website');
   if (d.website) { wb.href = d.website; wb.style.display = 'block'; } else { wb.style.display = 'none'; }
+
+  // Street-level map embed
+  const mapDiv = document.getElementById('dp-map');
+  mapDiv.innerHTML = '<iframe width="100%" height="100%" frameborder="0" scrolling="no" style="border:0;border-radius:6px;" src="https://www.openstreetmap.org/export/embed.html?bbox=' + (d.lng-0.01) + '%2C' + (d.lat-0.008) + '%2C' + (d.lng+0.01) + '%2C' + (d.lat+0.008) + '&layer=mapnik&marker=' + d.lat + '%2C' + d.lng + '"></iframe>';
 
   p.classList.add('open');
 }
