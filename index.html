@@ -199,6 +199,59 @@ canvas { display: block; }
   transition: background 0.2s;
 }
 #dealer-panel .visit-btn:hover { background: var(--gold-bright); }
+#dealer-panel .map-btn {
+  display: block; width: 100%; margin-top: 8px;
+  padding: 10px; text-align: center;
+  font-family: var(--font-ui); font-weight: 700; font-size: 13px;
+  color: var(--gold); background: transparent;
+  border: 1px solid var(--gold); border-radius: 4px; cursor: pointer;
+  letter-spacing: 2px; text-transform: uppercase;
+  transition: all 0.2s;
+}
+#dealer-panel .map-btn:hover { background: rgba(201,168,76,0.15); }
+
+/* Full-screen map overlay */
+#map-overlay {
+  position: fixed; inset: 0; z-index: 500;
+  background: rgba(0,4,8,0.95);
+  display: none; flex-direction: column;
+  align-items: center; justify-content: center;
+}
+#map-overlay.open { display: flex; }
+#map-overlay .map-header {
+  position: absolute; top: 0; left: 0; right: 0;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 28px;
+  background: linear-gradient(180deg, rgba(0,4,8,0.95) 0%, transparent 100%);
+}
+#map-overlay .map-title {
+  font-family: var(--font-ui); font-weight: 700; font-size: 16px;
+  color: #fff; letter-spacing: 1px;
+}
+#map-overlay .map-subtitle {
+  font-family: var(--font-mono); font-size: 11px;
+  color: var(--text-dim); letter-spacing: 1px;
+}
+#map-overlay .map-close {
+  background: none; border: 1px solid var(--border); border-radius: 4px;
+  color: var(--text-dim); font-size: 14px; cursor: pointer;
+  padding: 6px 14px; font-family: var(--font-ui); font-weight: 600;
+  letter-spacing: 1px; transition: all 0.2s;
+}
+#map-overlay .map-close:hover { color: var(--gold); border-color: var(--gold); }
+#map-overlay .map-frame {
+  width: 90vw; height: 75vh;
+  border-radius: 8px; overflow: hidden;
+  border: 1px solid var(--border);
+  margin-top: 60px;
+}
+#map-overlay .map-frame iframe { width: 100%; height: 100%; border: 0; }
+#map-overlay .map-link {
+  margin-top: 12px;
+  font-family: var(--font-mono); font-size: 11px;
+  color: var(--gold); text-decoration: none; letter-spacing: 1px;
+}
+#map-overlay .map-link:hover { text-decoration: underline; }
 
 /* Cluster mini-list panel */
 #cluster-panel {
@@ -384,8 +437,7 @@ canvas { display: block; }
   <div class="divider"></div>
   <div id="dp-contact"></div>
   <a class="visit-btn" id="dp-website" href="#" target="_blank" rel="noopener">VISIT WEBSITE &rarr;</a>
-  <div class="divider"></div>
-  <div id="dp-map" style="width:100%;height:200px;border-radius:6px;overflow:hidden;border:1px solid rgba(201,168,76,0.2);"></div>
+  <button class="map-btn" id="dp-map-btn">&#128205; VIEW ON STREET MAP</button>
 </div>
 
 <div id="cluster-panel">
@@ -408,6 +460,18 @@ canvas { display: block; }
 
 <div id="kbd-hints">
   <kbd>/</kbd> Search &nbsp; <kbd>F</kbd> Filter &nbsp; <kbd>Esc</kbd> Close &nbsp; <kbd>R</kbd> Reset
+</div>
+
+<div id="map-overlay">
+  <div class="map-header">
+    <div>
+      <div class="map-title" id="map-title"></div>
+      <div class="map-subtitle" id="map-subtitle"></div>
+    </div>
+    <button class="map-close" id="map-close">CLOSE MAP</button>
+  </div>
+  <div class="map-frame" id="map-frame"></div>
+  <a class="map-link" id="map-link" href="#" target="_blank" rel="noopener">Open in OpenStreetMap &rarr;</a>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -987,7 +1051,7 @@ addEventListener('keydown', e => {
     return;
   }
   switch(e.key) {
-    case 'Escape': closePanels(); document.getElementById('filter-panel').classList.remove('open'); break;
+    case 'Escape': closeMap(); closePanels(); document.getElementById('filter-panel').classList.remove('open'); break;
     case 'f': case 'F': e.preventDefault(); document.getElementById('filter-panel').classList.toggle('open'); break;
     case 'r': case 'R':
       camera.position.z = CAM_DEF; globeGroup.rotation.set(0, 0, 0); camAnim = null;
@@ -1031,9 +1095,9 @@ function showDealer(d) {
   const wb = document.getElementById('dp-website');
   if (d.website) { wb.href = d.website; wb.style.display = 'block'; } else { wb.style.display = 'none'; }
 
-  // Street-level map embed
-  const mapDiv = document.getElementById('dp-map');
-  mapDiv.innerHTML = '<iframe width="100%" height="100%" frameborder="0" scrolling="no" style="border:0;border-radius:6px;" src="https://www.openstreetmap.org/export/embed.html?bbox=' + (d.lng-0.01) + '%2C' + (d.lat-0.008) + '%2C' + (d.lng+0.01) + '%2C' + (d.lat+0.008) + '&layer=mapnik&marker=' + d.lat + '%2C' + d.lng + '"></iframe>';
+  // Wire up map button
+  const mapBtn = document.getElementById('dp-map-btn');
+  mapBtn.onclick = () => openMap(d);
 
   p.classList.add('open');
 }
@@ -1062,6 +1126,23 @@ function closeCluster() { document.getElementById('cluster-panel').classList.rem
 document.getElementById('cp-close').addEventListener('click', closeCluster);
 
 function closePanels() { closeDealer(); closeCluster(); }
+
+// ── Full-screen map overlay ──
+function openMap(d) {
+  const overlay = document.getElementById('map-overlay');
+  document.getElementById('map-title').textContent = d.name;
+  document.getElementById('map-subtitle').textContent = d.city;
+  const bbox = (d.lng-0.005) + ',' + (d.lat-0.004) + ',' + (d.lng+0.005) + ',' + (d.lat+0.004);
+  document.getElementById('map-frame').innerHTML = '<iframe src="https://www.openstreetmap.org/export/embed.html?bbox=' + bbox.replace(/,/g, '%2C') + '&layer=mapnik&marker=' + d.lat + '%2C' + d.lng + '" allowfullscreen></iframe>';
+  document.getElementById('map-link').href = 'https://www.openstreetmap.org/?mlat=' + d.lat + '&mlon=' + d.lng + '#map=17/' + d.lat + '/' + d.lng;
+  overlay.classList.add('open');
+}
+function closeMap() {
+  const overlay = document.getElementById('map-overlay');
+  overlay.classList.remove('open');
+  document.getElementById('map-frame').innerHTML = '';
+}
+document.getElementById('map-close').addEventListener('click', closeMap);
 
 // ── Clock ──
 function tick() {
