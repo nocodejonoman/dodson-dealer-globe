@@ -10,7 +10,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 41.1125,
     "lng": 20.0831,
     "region": "",
@@ -96,7 +96,7 @@ const DEALERS = [
     "platforms": [
       "Lamborghini Huracán / Audi R8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": -33.9065,
     "lng": 151.1982,
     "region": "",
@@ -113,7 +113,7 @@ const DEALERS = [
     "platforms": [
       "Lamborghini Huracán / Audi R8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": -31.669,
     "lng": 116.0472,
     "region": "",
@@ -130,7 +130,7 @@ const DEALERS = [
     "platforms": [
       "Mitsubishi EVO X"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": -33.7625,
     "lng": 150.7742,
     "region": "",
@@ -166,7 +166,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": -33.8519,
     "lng": 150.9426,
     "region": "",
@@ -208,7 +208,7 @@ const DEALERS = [
     "platforms": [
       "Lamborghini Huracán / Audi R8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": -33.8688,
     "lng": 151.2093,
     "region": "",
@@ -225,7 +225,7 @@ const DEALERS = [
     "platforms": [
       "VW/Audi DSG"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": -33.8688,
     "lng": 151.2093,
     "region": "",
@@ -242,7 +242,7 @@ const DEALERS = [
     "platforms": [
       "Lamborghini Huracán / Audi R8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": -27.4698,
     "lng": 153.0251,
     "region": "",
@@ -298,7 +298,7 @@ const DEALERS = [
     "platforms": [
       "Mitsubishi EVO X"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": -33.829,
     "lng": 151.087,
     "region": "",
@@ -333,7 +333,7 @@ const DEALERS = [
     "platforms": [
       "Corvette C8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": -31.8608,
     "lng": 115.8889,
     "region": "",
@@ -369,7 +369,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 26.1735,
     "lng": 50.5477,
     "region": "",
@@ -466,7 +466,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": -23.5505,
     "lng": -46.6333,
     "region": "",
@@ -483,7 +483,7 @@ const DEALERS = [
     "platforms": [
       "BMW 8HP"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": -23.9608,
     "lng": -46.3336,
     "region": "",
@@ -500,7 +500,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": -23.5505,
     "lng": -46.6333,
     "region": "",
@@ -517,7 +517,7 @@ const DEALERS = [
     "platforms": [
       "Lamborghini Huracán / Audi R8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": -23.5505,
     "lng": -46.6333,
     "region": "",
@@ -571,7 +571,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 46.8139,
     "lng": -71.208,
     "region": "",
@@ -625,7 +625,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 43.7921,
     "lng": -79.4875,
     "region": "",
@@ -642,7 +642,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 44.0593,
     "lng": -79.4613,
     "region": "",
@@ -677,7 +677,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 49.1044,
     "lng": -122.6608,
     "region": "",
@@ -694,7 +694,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 45.5687,
     "lng": -73.748,
     "region": "",
@@ -711,7 +711,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 46.8139,
     "lng": -71.208,
     "region": "",
@@ -798,7 +798,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 49.4554,
     "lng": 17.4513,
     "region": "",
@@ -872,7 +872,7 @@ const DEALERS = [
     "platforms": [
       "Mitsubishi EVO X"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 59.3015,
     "lng": 24.6621,
     "region": "",
@@ -910,7 +910,7 @@ const DEALERS = [
     "platforms": [
       "BMW 8HP"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 61.4978,
     "lng": 23.761,
     "region": "",
@@ -927,7 +927,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 26.7153,
     "lng": -80.0534,
     "region": "",
@@ -944,7 +944,7 @@ const DEALERS = [
     "platforms": [
       "BMW 8HP"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 28.8036,
     "lng": -81.7257,
     "region": "",
@@ -961,7 +961,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 26.2712,
     "lng": -80.2706,
     "region": "",
@@ -978,7 +978,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 48.7745,
     "lng": 2.0012,
     "region": "",
@@ -1034,7 +1034,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 43.6163,
     "lng": 6.9722,
     "region": "",
@@ -1051,7 +1051,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 45.5878,
     "lng": 0.3233,
     "region": "",
@@ -1068,7 +1068,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 51.5136,
     "lng": 7.4653,
     "region": "",
@@ -1180,7 +1180,7 @@ const DEALERS = [
     "platforms": [
       "Corvette C8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 51.0967,
     "lng": 6.8317,
     "region": "",
@@ -1197,7 +1197,7 @@ const DEALERS = [
     "platforms": [
       "BMW 8HP"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 49.4401,
     "lng": 7.7491,
     "region": "",
@@ -1214,7 +1214,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 51.7371,
     "lng": 14.6331,
     "region": "",
@@ -1231,7 +1231,7 @@ const DEALERS = [
     "platforms": [
       "Lamborghini Huracán / Audi R8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 49.1067,
     "lng": 11.4417,
     "region": "",
@@ -1248,7 +1248,7 @@ const DEALERS = [
     "platforms": [
       "VW/Audi DSG"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 49.4289,
     "lng": 9.4239,
     "region": "",
@@ -1283,7 +1283,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 49.3836,
     "lng": 8.3756,
     "region": "",
@@ -1300,7 +1300,7 @@ const DEALERS = [
     "platforms": [
       "Lamborghini Huracán / Audi R8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 51.4963,
     "lng": 6.8638,
     "region": "",
@@ -1339,7 +1339,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 51.2562,
     "lng": 7.1508,
     "region": "",
@@ -1394,7 +1394,7 @@ const DEALERS = [
     "platforms": [
       "Corvette C8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 50.5006,
     "lng": 9.1178,
     "region": "",
@@ -1450,7 +1450,7 @@ const DEALERS = [
     "platforms": [
       "VW/Audi DSG"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 22.3193,
     "lng": 114.1694,
     "region": "",
@@ -1467,7 +1467,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 47.402,
     "lng": 19.2753,
     "region": "",
@@ -1484,7 +1484,7 @@ const DEALERS = [
     "platforms": [
       "Ford Mustang GT500"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 39.4278,
     "lng": -86.4283,
     "region": "",
@@ -1501,7 +1501,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 12.9716,
     "lng": 77.5946,
     "region": "",
@@ -1536,7 +1536,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 32.0333,
     "lng": 34.8875,
     "region": "",
@@ -1572,7 +1572,7 @@ const DEALERS = [
     "platforms": [
       "Lamborghini Huracán / Audi R8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 45.735,
     "lng": 12.2253,
     "region": "",
@@ -1607,7 +1607,7 @@ const DEALERS = [
     "platforms": [
       "VW/Audi DSG"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 40.8518,
     "lng": 14.2681,
     "region": "",
@@ -1670,7 +1670,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 36.5174,
     "lng": 136.6068,
     "region": "",
@@ -1725,7 +1725,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 33.8547,
     "lng": 35.5404,
     "region": "",
@@ -1760,7 +1760,7 @@ const DEALERS = [
     "platforms": [
       "VW/Audi DSG"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 3.0738,
     "lng": 101.5183,
     "region": "",
@@ -1777,7 +1777,7 @@ const DEALERS = [
     "platforms": [
       "Mitsubishi EVO X"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 3.0738,
     "lng": 101.5183,
     "region": "",
@@ -1794,7 +1794,7 @@ const DEALERS = [
     "platforms": [
       "Lamborghini Huracán / Audi R8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 20.6597,
     "lng": -103.3496,
     "region": "",
@@ -1811,7 +1811,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 20.6597,
     "lng": -103.3496,
     "region": "",
@@ -1828,7 +1828,7 @@ const DEALERS = [
     "platforms": [
       "VW/Audi DSG"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 45.1608,
     "lng": -93.2349,
     "region": "",
@@ -1845,7 +1845,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 52.239,
     "lng": 4.826,
     "region": "",
@@ -1961,7 +1961,7 @@ const DEALERS = [
     "platforms": [
       "VW/Audi DSG"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": -36.8485,
     "lng": 174.7633,
     "region": "",
@@ -1996,7 +1996,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": -36.8485,
     "lng": 174.7633,
     "region": "",
@@ -2013,7 +2013,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": -43.5321,
     "lng": 172.6362,
     "region": "",
@@ -2030,7 +2030,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": -36.8485,
     "lng": 174.7633,
     "region": "",
@@ -2047,7 +2047,7 @@ const DEALERS = [
     "platforms": [
       "VW/Audi DSG"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": -36.8485,
     "lng": 174.7633,
     "region": "",
@@ -2064,7 +2064,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": -41.2865,
     "lng": 174.7762,
     "region": "",
@@ -2100,7 +2100,7 @@ const DEALERS = [
     "platforms": [
       "BMW 8HP"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 59.4138,
     "lng": 5.268,
     "region": "",
@@ -2136,7 +2136,7 @@ const DEALERS = [
     "platforms": [
       "Corvette C8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 41.4353,
     "lng": -81.5362,
     "region": "",
@@ -2208,7 +2208,7 @@ const DEALERS = [
     "platforms": [
       "Lamborghini Huracán / Audi R8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 14.676,
     "lng": 121.0437,
     "region": "",
@@ -2246,7 +2246,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 52.2297,
     "lng": 21.0122,
     "region": "",
@@ -2299,7 +2299,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 41.5518,
     "lng": -8.4229,
     "region": "",
@@ -2335,7 +2335,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 18.2388,
     "lng": -66.0377,
     "region": "",
@@ -2370,7 +2370,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": -27.534,
     "lng": 152.779,
     "region": "",
@@ -2444,7 +2444,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 44.4933,
     "lng": 26.1443,
     "region": "",
@@ -2461,7 +2461,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 21.4858,
     "lng": 39.1925,
     "region": "",
@@ -2499,7 +2499,7 @@ const DEALERS = [
     "platforms": [
       "VW/Audi DSG"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 56.0019,
     "lng": -3.7839,
     "region": "",
@@ -2572,7 +2572,7 @@ const DEALERS = [
     "platforms": [
       "BMW 8HP"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": -33.9249,
     "lng": 18.4241,
     "region": "",
@@ -2630,7 +2630,7 @@ const DEALERS = [
     "platforms": [
       "BMW 8HP"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": -26.2154,
     "lng": 28.1668,
     "region": "",
@@ -2647,7 +2647,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": -29.8087,
     "lng": 30.88,
     "region": "",
@@ -2682,7 +2682,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 37.4138,
     "lng": 127.5183,
     "region": "",
@@ -2699,7 +2699,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 37.2614,
     "lng": -6.9447,
     "region": "",
@@ -2774,7 +2774,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 59.1955,
     "lng": 17.6253,
     "region": "",
@@ -2791,7 +2791,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 62.3908,
     "lng": 17.3069,
     "region": "",
@@ -2808,7 +2808,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 59.3293,
     "lng": 18.0686,
     "region": "",
@@ -2881,7 +2881,7 @@ const DEALERS = [
     "platforms": [
       "VW/Audi DSG"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 47.4667,
     "lng": 8.5333,
     "region": "",
@@ -2916,7 +2916,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 33.0462,
     "lng": -96.9942,
     "region": "",
@@ -3007,7 +3007,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 41.0082,
     "lng": 28.9784,
     "region": "",
@@ -3045,7 +3045,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 41.0082,
     "lng": 28.9784,
     "region": "",
@@ -3134,7 +3134,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 53.39,
     "lng": -2.597,
     "region": "",
@@ -3190,7 +3190,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 51.7343,
     "lng": 0.4691,
     "region": "",
@@ -3207,7 +3207,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 52.0406,
     "lng": -0.7594,
     "region": "",
@@ -3260,7 +3260,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 54.9783,
     "lng": -1.6178,
     "region": "",
@@ -3303,7 +3303,7 @@ const DEALERS = [
     "platforms": [
       "VW/Audi DSG"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 52.8793,
     "lng": -2.0572,
     "region": "",
@@ -3320,7 +3320,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 52.586,
     "lng": -1.9829,
     "region": "",
@@ -3337,7 +3337,7 @@ const DEALERS = [
     "platforms": [
       "Lamborghini Huracán / Audi R8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 51.5558,
     "lng": -1.7797,
     "region": "",
@@ -3373,7 +3373,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 51.0048,
     "lng": -0.1048,
     "region": "",
@@ -3390,7 +3390,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 52.1357,
     "lng": -0.4667,
     "region": "",
@@ -3407,7 +3407,7 @@ const DEALERS = [
     "platforms": [
       "Lamborghini Huracán / Audi R8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 51.1465,
     "lng": 0.8738,
     "region": "",
@@ -3424,7 +3424,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 54.5162,
     "lng": -6.058,
     "region": "",
@@ -3441,7 +3441,7 @@ const DEALERS = [
     "platforms": [
       "Lamborghini Huracán / Audi R8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 27.9659,
     "lng": -82.8001,
     "region": "",
@@ -3476,7 +3476,7 @@ const DEALERS = [
     "platforms": [
       "Lamborghini Huracán / Audi R8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 41.8847,
     "lng": -88.204,
     "region": "",
@@ -3512,7 +3512,7 @@ const DEALERS = [
     "platforms": [
       "Corvette C8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 30.9843,
     "lng": -91.9623,
     "region": "",
@@ -3529,7 +3529,7 @@ const DEALERS = [
     "platforms": [
       "Lamborghini Huracán / Audi R8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 41.9997,
     "lng": -88.1451,
     "region": "",
@@ -3546,7 +3546,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 33.491,
     "lng": -86.9741,
     "region": "",
@@ -3563,7 +3563,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 33.6603,
     "lng": -117.9992,
     "region": "",
@@ -3580,7 +3580,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 26.2379,
     "lng": -80.1248,
     "region": "",
@@ -3617,7 +3617,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 36.1627,
     "lng": -86.7816,
     "region": "",
@@ -3653,7 +3653,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 48.4757,
     "lng": -122.3254,
     "region": "",
@@ -3670,7 +3670,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 33.8358,
     "lng": -118.3406,
     "region": "",
@@ -3687,7 +3687,7 @@ const DEALERS = [
     "platforms": [
       "McLaren"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 42.1064,
     "lng": -88.3736,
     "region": "",
@@ -3704,7 +3704,7 @@ const DEALERS = [
     "platforms": [
       "BMW 8HP"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 32.7767,
     "lng": -96.797,
     "region": "",
@@ -3721,7 +3721,7 @@ const DEALERS = [
     "platforms": [
       "Lamborghini Huracán / Audi R8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 34.0775,
     "lng": -117.6898,
     "region": "",
@@ -3808,7 +3808,7 @@ const DEALERS = [
     "platforms": [
       "VW/Audi DSG"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 41.2793,
     "lng": -72.8151,
     "region": "",
@@ -3825,7 +3825,7 @@ const DEALERS = [
     "platforms": [
       "McLaren"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 26.3683,
     "lng": -80.1289,
     "region": "",
@@ -3860,7 +3860,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 35.822,
     "lng": -84.0479,
     "region": "",
@@ -3877,7 +3877,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 44.8041,
     "lng": -93.1669,
     "region": "",
@@ -3933,7 +3933,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 38.7131,
     "lng": -90.4263,
     "region": "",
@@ -3950,7 +3950,7 @@ const DEALERS = [
     "platforms": [
       "Lamborghini Huracán / Audi R8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 27.3364,
     "lng": -82.5307,
     "region": "",
@@ -3967,7 +3967,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 40.8793,
     "lng": -74.659,
     "region": "",
@@ -3984,7 +3984,7 @@ const DEALERS = [
     "platforms": [
       "Ford Mustang GT500"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 29.781,
     "lng": -96.1572,
     "region": "",
@@ -4001,7 +4001,7 @@ const DEALERS = [
     "platforms": [
       "McLaren"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 35.4868,
     "lng": -80.8601,
     "region": "",
@@ -4072,7 +4072,7 @@ const DEALERS = [
     "platforms": [
       "Lamborghini Huracán / Audi R8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 32.9126,
     "lng": -96.6389,
     "region": "",
@@ -4089,7 +4089,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 43.0731,
     "lng": -89.4012,
     "region": "",
@@ -4124,7 +4124,7 @@ const DEALERS = [
     "platforms": [
       "BMW 8HP"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 40.4779,
     "lng": -74.2907,
     "region": "",
@@ -4179,7 +4179,7 @@ const DEALERS = [
     "platforms": [
       "VW/Audi DSG"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 40.7128,
     "lng": -74.006,
     "region": "",
@@ -4196,7 +4196,7 @@ const DEALERS = [
     "platforms": [
       "Ford Mustang GT500"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 26.5253,
     "lng": -80.0661,
     "region": "",
@@ -4213,7 +4213,7 @@ const DEALERS = [
     "platforms": [
       "Mercedes-AMG GT"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 34.2572,
     "lng": -118.6012,
     "region": "",
@@ -4230,7 +4230,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 42.7325,
     "lng": -84.5555,
     "region": "",
@@ -4247,7 +4247,7 @@ const DEALERS = [
     "platforms": [
       "Lamborghini Huracán / Audi R8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 42.3336,
     "lng": -88.2668,
     "region": "",
@@ -4289,7 +4289,7 @@ const DEALERS = [
     "platforms": [
       "Mercedes-AMG GT"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 27.1975,
     "lng": -80.2528,
     "region": "",
@@ -4306,7 +4306,7 @@ const DEALERS = [
     "platforms": [
       "BMW 8HP"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 40.7268,
     "lng": -73.3574,
     "region": "",
@@ -4323,7 +4323,7 @@ const DEALERS = [
     "platforms": [
       "BMW 8HP"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 39.0062,
     "lng": -77.4286,
     "region": "",
@@ -4340,7 +4340,7 @@ const DEALERS = [
     "platforms": [
       "Mitsubishi EVO X"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 44.7677,
     "lng": -93.2777,
     "region": "",
@@ -4376,7 +4376,7 @@ const DEALERS = [
     "platforms": [
       "BMW 8HP"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 37.3541,
     "lng": -121.9552,
     "region": "",
@@ -4393,7 +4393,7 @@ const DEALERS = [
     "platforms": [
       "Nissan GT-R R35"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 34.0522,
     "lng": -118.2437,
     "region": "",
@@ -4410,7 +4410,7 @@ const DEALERS = [
     "platforms": [
       "BMW 8HP"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 33.7879,
     "lng": -117.8531,
     "region": "",
@@ -4427,7 +4427,7 @@ const DEALERS = [
     "platforms": [
       "Lamborghini Huracán / Audi R8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 29.7604,
     "lng": -95.3698,
     "region": "",
@@ -4444,7 +4444,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 39.149,
     "lng": -76.7747,
     "region": "",
@@ -4461,7 +4461,7 @@ const DEALERS = [
     "platforms": [
       "Lamborghini Huracán / Audi R8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 35.2271,
     "lng": -80.8431,
     "region": "",
@@ -4478,7 +4478,7 @@ const DEALERS = [
     "platforms": [
       "VW/Audi DSG"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 26.2379,
     "lng": -80.1248,
     "region": "",
@@ -4495,7 +4495,7 @@ const DEALERS = [
     "platforms": [
       "Corvette C8"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 34.2073,
     "lng": -84.1402,
     "region": "",
@@ -4512,7 +4512,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 33.8358,
     "lng": -118.3406,
     "region": "",
@@ -4529,7 +4529,7 @@ const DEALERS = [
     "platforms": [
       "Porsche PDK"
     ],
-    "tier": "Standard",
+    "tier": "Dealer",
     "lat": 28.5383,
     "lng": -81.3792,
     "region": "",

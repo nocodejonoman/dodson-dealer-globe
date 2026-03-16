@@ -114,7 +114,6 @@ canvas { display: block; }
   cursor: pointer; padding: 3px 0;
 }
 #filter-panel label:hover { color: var(--gold); }
-#filter-panel input[type="checkbox"] { accent-color: var(--gold); }
 #filter-panel select {
   width: 100%; background: rgba(255,255,255,0.05);
   border: 1px solid var(--border); border-radius: 4px;
@@ -284,20 +283,6 @@ canvas { display: block; }
 #cluster-panel .dealer-item .tier-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
 #cluster-panel .dealer-item .item-city { font-family: var(--font-mono); font-size: 10px; color: var(--text-dim); }
 
-/* Legend */
-#legend {
-  position: fixed; bottom: 20px; left: 24px; z-index: 100;
-  background: var(--panel-bg); border: 1px solid var(--border);
-  border-radius: 6px; padding: 12px 16px; backdrop-filter: blur(10px);
-}
-#legend .legend-item {
-  display: flex; align-items: center; gap: 8px;
-  font-family: var(--font-mono); font-size: 11px; color: var(--text);
-  padding: 3px 0; cursor: pointer; transition: opacity 0.2s;
-}
-#legend .legend-item:hover { color: var(--gold); }
-#legend .legend-item.dimmed { opacity: 0.3; }
-
 /* Tooltip */
 #tooltip {
   position: fixed; z-index: 400;
@@ -388,13 +373,6 @@ canvas { display: block; }
 
 <div id="filter-panel">
   <div class="section">
-    <h4>DEALER TIER</h4>
-    <label><input type="checkbox" class="tier-filter" value="Distributor" checked> Distributor</label>
-    <label><input type="checkbox" class="tier-filter" value="Pro Dealer" checked> Pro Dealer</label>
-    <label><input type="checkbox" class="tier-filter" value="Dealer Plus" checked> Dealer Plus</label>
-    <label><input type="checkbox" class="tier-filter" value="Standard" checked> Standard</label>
-  </div>
-  <div class="section">
     <h4>COUNTRY</h4>
     <select id="country-filter"><option value="">All Countries</option></select>
   </div>
@@ -448,12 +426,6 @@ canvas { display: block; }
   <div id="cp-list"></div>
 </div>
 
-<div id="legend">
-  <div class="legend-item" data-tier="Distributor"><span style="background:#e8f0ff;width:8px;height:8px;border-radius:50%;display:inline-block"></span> Distributor</div>
-  <div class="legend-item" data-tier="Pro Dealer"><span style="background:#c9a84c;width:8px;height:8px;border-radius:50%;display:inline-block"></span> Pro Dealer</div>
-  <div class="legend-item" data-tier="Dealer Plus"><span style="background:#1a8fff;width:8px;height:8px;border-radius:50%;display:inline-block"></span> Dealer Plus</div>
-  <div class="legend-item" data-tier="Standard"><span style="background:#2a9d8f;width:8px;height:8px;border-radius:50%;display:inline-block"></span> Standard</div>
-</div>
 
 <div id="tooltip"></div>
 <div id="empty-state">NO DEALERS MATCH YOUR FILTERS</div>
@@ -484,6 +456,7 @@ const TIER_COLORS = {
   'Distributor':  { hex: 0xe8f0ff, css: '#e8f0ff', priority: 4 },
   'Pro Dealer':   { hex: 0xc9a84c, css: '#c9a84c', priority: 3 },
   'Dealer Plus':  { hex: 0x1a8fff, css: '#1a8fff', priority: 2 },
+  'Dealer':       { hex: 0x2a9d8f, css: '#2a9d8f', priority: 1 },
   'Standard':     { hex: 0x2a9d8f, css: '#2a9d8f', priority: 1 }
 };
 
@@ -820,14 +793,11 @@ function rebuild() {
 
 // ── Filters ──
 function applyFilters() {
-  const tiers = new Set();
-  document.querySelectorAll('.tier-filter').forEach(c => { if (c.checked) tiers.add(c.value); });
   const country = csel.value;
   const platform = document.getElementById('platform-filter').value;
   const q = searchQuery.toLowerCase();
 
   visible = valid.filter(d => {
-    if (!tiers.has(d.tier)) return false;
     if (country && d._country !== country) return false;
     if (platform && !d.platforms.includes(platform)) return false;
     if (q && !d.name.toLowerCase().includes(q) && !d.city.toLowerCase().includes(q) && !d._country.toLowerCase().includes(q)) return false;
@@ -849,16 +819,11 @@ function applyFilters() {
     setTimeout(() => showDealer(d), 600);
   }
 
-  document.querySelectorAll('#legend .legend-item').forEach(el => {
-    el.classList.toggle('dimmed', !tiers.has(el.dataset.tier));
-  });
 }
 
-document.querySelectorAll('.tier-filter').forEach(c => c.addEventListener('change', applyFilters));
 csel.addEventListener('change', applyFilters);
 document.getElementById('platform-filter').addEventListener('change', applyFilters);
 document.getElementById('reset-filters').addEventListener('click', () => {
-  document.querySelectorAll('.tier-filter').forEach(c => c.checked = true);
   csel.value = '';
   document.getElementById('platform-filter').value = '';
   searchQuery = '';
@@ -868,13 +833,6 @@ document.getElementById('reset-filters').addEventListener('click', () => {
 });
 document.getElementById('filter-toggle').addEventListener('click', () => {
   document.getElementById('filter-panel').classList.toggle('open');
-});
-document.querySelectorAll('#legend .legend-item').forEach(el => {
-  el.addEventListener('click', () => {
-    const cb = document.querySelector(`.tier-filter[value="${el.dataset.tier}"]`);
-    cb.checked = !cb.checked;
-    applyFilters();
-  });
 });
 
 // ── Search ──
@@ -1068,7 +1026,6 @@ addEventListener('keydown', e => {
     case 'f': case 'F': e.preventDefault(); document.getElementById('filter-panel').classList.toggle('open'); break;
     case 'r': case 'R':
       camera.position.z = CAM_DEF; globeGroup.rotation.set(0, 0, 0); camAnim = null;
-      document.querySelectorAll('.tier-filter').forEach(c => c.checked = true);
       csel.value = ''; document.getElementById('platform-filter').value = '';
       searchInput.value = ''; searchQuery = ''; searchClear.style.display = 'none';
       applyFilters(); closePanels(); break;
