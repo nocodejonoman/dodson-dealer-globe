@@ -441,16 +441,16 @@ renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
 renderer.setClearColor(0x000408);
 document.body.appendChild(renderer.domElement);
 
-scene.add(new THREE.AmbientLight(0x88aacc, 1.8));
-const sunLight = new THREE.DirectionalLight(0xffeedd, 1.2);
+scene.add(new THREE.AmbientLight(0x334466, 1.2));
+const sunLight = new THREE.DirectionalLight(0xaaccee, 0.4);
 sunLight.position.set(5, 3, 5);
 scene.add(sunLight);
-const backLight = new THREE.DirectionalLight(0x6688aa, 0.8);
+const backLight = new THREE.DirectionalLight(0x223344, 0.3);
 backLight.position.set(-3, -2, -5);
 scene.add(backLight);
-const fillLight = new THREE.DirectionalLight(0xaabbcc, 0.5);
-fillLight.position.set(0, -5, 3);
-scene.add(fillLight);
+const rimLight = new THREE.DirectionalLight(0x4488ff, 0.35);
+rimLight.position.set(-5, 0, -3);
+scene.add(rimLight);
 
 const globeGroup = new THREE.Group();
 scene.add(globeGroup);
@@ -557,12 +557,17 @@ function createTerminator() {
 
 function buildGlobe(tex) {
   const mat = tex
-    ? new THREE.MeshPhongMaterial({ map: tex })
+    ? new THREE.MeshPhongMaterial({ map: tex, emissiveMap: tex, emissive: 0xffffff, emissiveIntensity: 0.6 })
     : new THREE.MeshPhongMaterial({ color: 0x0a1628 });
   globeGroup.add(new THREE.Mesh(new THREE.SphereGeometry(GLOBE_R, 64, 64), mat));
   globeGroup.add(new THREE.Mesh(
     new THREE.SphereGeometry(2.08, 64, 64),
-    new THREE.MeshPhongMaterial({ color: 0x1a4aff, transparent: true, opacity: 0.06, side: THREE.BackSide })
+    new THREE.MeshPhongMaterial({ color: 0x3366ff, transparent: true, opacity: 0.12, side: THREE.BackSide })
+  ));
+  // Outer atmospheric glow
+  globeGroup.add(new THREE.Mesh(
+    new THREE.SphereGeometry(2.18, 64, 64),
+    new THREE.MeshPhongMaterial({ color: 0x2255cc, transparent: true, opacity: 0.06, side: THREE.BackSide })
   ));
   createTerminator();
   tl.load('https://unpkg.com/three-globe/example/img/earth-clouds.png', ct => {
@@ -575,12 +580,9 @@ function buildGlobe(tex) {
   init();
 }
 
-tl.load('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg',
+tl.load('https://unpkg.com/three-globe/example/img/earth-night.jpg',
   t => buildGlobe(t), undefined,
-  () => tl.load('https://unpkg.com/three-globe/example/img/earth-day.jpg',
-    t => buildGlobe(t), undefined,
-    () => buildGlobe(null)
-  )
+  () => buildGlobe(null)
 );
 
 // ── Helpers ──
